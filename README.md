@@ -7,7 +7,7 @@
 - 我们的视频会议的视频数据采用的RTP包，我们在RTP的payload中填充了我们自定义的数据。RTP包的payload中第一个字节是PT，接下来二个字节是SequenceNumber，如果是视频包，后面的才是视频H264格式的数据。
 - 由于这种结构导致wireshark无法正确解析更上一层的数据。只能解析到RTP数据包这一层。如下图。
 
-- ![./Image/1.png]
+- ![https://github.com/zhangyi-13572252156/Wireshark-Plug-In/raw/master/Image/1.png]
 
 - 有时，我们需要分析H264的报文，因此一款插件来解析RTP包中的payload来显示出H264的数据就非常的有必要。如下图
 
